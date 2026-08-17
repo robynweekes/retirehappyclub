@@ -12,7 +12,9 @@
 }
 
 .sponsor-footer__label {
-  margin: 0 0 16px;
+  width: 100%;
+  margin: 0 0 24px;
+  text-align: center;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -20,20 +22,21 @@
   color: #888;
 }
 
-.sponsor-footer__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.sponsor-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
 }
 
 .sponsor-footer__item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #222;
+  justify-content: center;
+  width: 100%;
   transition: opacity 0.2s ease;
 }
 
@@ -44,18 +47,20 @@
 .sponsor-footer__logo {
   height: 40px;
   width: auto;
-  max-width: 160px;
+  max-width: 100%;
   object-fit: contain;
 }
 
-.sponsor-footer__name {
-  font-size: 15px;
-  font-weight: 600;
+@media (max-width: 768px) {
+  .sponsor-footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
 }
 
 @media (max-width: 480px) {
-  .sponsor-footer__list {
-    flex-direction: column;
-    gap: 16px;
+  .sponsor-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
