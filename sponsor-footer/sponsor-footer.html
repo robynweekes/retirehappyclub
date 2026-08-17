@@ -1,0 +1,90 @@
+<!--
+  Sponsor thank-you footer for spookyseason.teachery.co
+
+  Where to paste this in Teachery:
+  Site settings → Design/Advanced → Custom Code → "Footer Code" (site-wide,
+  appears on every page). If your Teachery plan only exposes a "Custom CSS"
+  field and not a footer HTML field, paste the <style> block into Custom CSS
+  and add the <footer>...</footer> markup as a "Custom HTML" block at the
+  bottom of each page instead.
+
+  To add more sponsors later, copy one .sponsor-footer__item block and
+  repeat it inside .sponsor-footer__list.
+-->
+<footer class="sponsor-footer">
+  <p class="sponsor-footer__label">With thanks to our sponsor</p>
+  <div class="sponsor-footer__list">
+    <a
+      class="sponsor-footer__item"
+      href="https://theretirehappyclub.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="sponsor-footer__logo"
+        src="https://theretirehappyclub.com/path/to/logo.png"
+        alt="The Retire Happy Club logo"
+      />
+      <span class="sponsor-footer__name">The Retire Happy Club</span>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .sponsor-footer {
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: inherit;
+  }
+
+  .sponsor-footer__label {
+    margin: 0 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .sponsor-footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .sponsor-footer__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #222;
+    transition: opacity 0.2s ease;
+  }
+
+  .sponsor-footer__item:hover {
+    opacity: 0.7;
+  }
+
+  .sponsor-footer__logo {
+    height: 40px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+  }
+
+  .sponsor-footer__name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .sponsor-footer__list {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+</style>
